@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+     @author = @post.author
+     #here we have to render author instance to have it show up in our partial _author for the post views
   end
 
   def new
