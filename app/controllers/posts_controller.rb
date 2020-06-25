@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.title = params[:title]
     @post.description = params[:description]
-    @post.author_id = @author.id
+    @post.author_id = @author.id #here every post created is linked to the author
     @post.save
     redirect_to post_path(@post)
   end
